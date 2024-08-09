@@ -1,8 +1,27 @@
 generator client {
-  provider = "prisma-client-js"
+    provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+    provider = "mongodb"
+    url      = env("DATABASE_URL")
+}
+
+// Prisma doesn't support an auto-incrementing primary key
+// so we need to manually assign a unique id using an SQL function
+model User {
+    id        String  @id @map("_id")
+    username  String
+    email     String  @unique
+    password  String
+    firstName String?
+    lastName  String?
+}
+
+model Item {
+    id       Int    @id @map("_id")
+    name     String
+    price    Int
+    imgsrc   String
+    category String
 }
