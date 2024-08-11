@@ -36,8 +36,8 @@ next-env.d.ts
 
 # editor directories and files
 *.un~
+*.swp
 *~
 .vscode
 .idea
 .idx
-bun.lockb
