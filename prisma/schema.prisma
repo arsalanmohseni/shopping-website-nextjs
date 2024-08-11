@@ -1,27 +1,41 @@
-generator client {
-    provider = "prisma-client-js"
-}
-
 datasource db {
     provider = "mongodb"
     url      = env("DATABASE_URL")
 }
 
-// Prisma doesn't support an auto-incrementing primary key
-// so we need to manually assign a unique id using an SQL function
-model User {
-    id        String  @id @map("_id")
-    username  String
-    email     String  @unique
-    password  String
-    firstName String?
-    lastName  String?
+generator client {
+    provider = "prisma-client-js"
 }
 
-model Item {
-    id       Int    @id @map("_id")
-    name     String
-    price    Int
-    imgsrc   String
-    category String
+model Post {
+    id       String    @id @default(auto()) @map("_id") @db.ObjectId
+    slug     String    @unique
+    title    String
+    body     String
+    author   User      @relation(fields: [authorId], references: [id])
+    authorId String    @db.ObjectId
+    comments Comment[]
+}
+
+model User {
+    id      String   @id @default(auto()) @map("_id") @db.ObjectId
+    email   String   @unique
+    name    String?
+    address Address?
+    posts   Post[]
+}
+
+model Comment {
+    id      String @id @default(auto()) @map("_id") @db.ObjectId
+    comment String
+    post    Post   @relation(fields: [postId], references: [id])
+    postId  String @db.ObjectId
+}
+
+// Address is an embedded document
+type Address {
+    street String
+    city   String
+    state  String
+    zip    String
 }
