@@ -2,7 +2,7 @@
 
 import { NextResponse } from 'next/server';
 
-interface Item {
+interface Product {
 	id: number;
 	name: string;
 	description: string;
@@ -12,7 +12,7 @@ interface Item {
 	isAvailable: boolean;
 }
 
-const products: Item[] = [
+const products: Product[] = [
 	{
 		id: 1,
 		name: 'Running Shoes',
@@ -45,3 +45,4 @@ const products: Item[] = [
 export const POST = async () => {
 	return NextResponse.json(products);
 };
+
