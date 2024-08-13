@@ -2,8 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 
 const page = () => {
-
-    const requestOptions = {
+	const requestOptions = {
 		method: 'GET',
 		redirect: 'follow' as RequestRedirect,
 	};
@@ -24,13 +23,12 @@ const page = () => {
 		fetchData();
 	});
 
-    return (
-        <div>
-            <h1 className='text-center text-6xl font-bold'>Shop</h1>
-            <div className="divider"></div>
-
-        </div>
-    );
+	return (
+		<div>
+			<h1 className="text-center text-6xl font-bold">Shop</h1>
+			<div className="divider"></div>
+		</div>
+	);
 };
 
 export default page;

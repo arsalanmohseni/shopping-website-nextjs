@@ -45,4 +45,3 @@ const products: Product[] = [
 export const POST = async () => {
 	return NextResponse.json(products);
 };
-

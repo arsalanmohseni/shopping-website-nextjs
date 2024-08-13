@@ -56,7 +56,7 @@ const Navbar = () => {
 				</ul>
 			</div>
 			<div className="navbar-end">
-				<a className="btn text-2xl btn-accent">Github repo</a>
+				<a className="btn btn-accent text-2xl">Github repo</a>
 			</div>
 		</div>
 	);
