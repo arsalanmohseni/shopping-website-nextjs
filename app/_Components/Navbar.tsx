@@ -30,33 +30,44 @@ const Navbar = () => {
 						className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
 					>
 						<li>
-							<a>Shop</a>
+							<a href="/shop" className='text-xl font-bold'>Shop</a>
 						</li>
 						<li>
-							<a>About us</a>
+							<a href="/about" className='text-xl font-bold'>About us</a>
 						</li>
 						<li>
-							<a>Conatct us</a>
+							<a href="/contact" className='text-xl font-bold'>Conatct us</a>
 						</li>
 					</ul>
 				</div>
-				<a className="btn btn-ghost text-4xl">Codikala</a>
+				<a
+					className="btn btn-ghost text-3xl"
+					href="/"
+				>
+					Codi lab
+				</a>
 			</div>
 			<div className="navbar-center hidden lg:flex">
 				<ul className="menu menu-horizontal px-1 *:text-2xl">
 					<li>
-						<a>Shop</a>
+						<a href="/shop">Shop</a>
 					</li>
 					<li>
-						<a>About us</a>
+						<a href="/about">About us</a>
 					</li>
 					<li>
-						<a>Conatct us</a>
+						<a href="/contact">Conatct us</a>
 					</li>
 				</ul>
 			</div>
 			<div className="navbar-end">
-				<a className="btn btn-accent text-2xl">Github repo</a>
+				<a
+					className="btn btn-accent text-xl"
+					target="_blank"
+					href="https://github.com/arsalanmohseni/shopping-website-nextjs"
+				>
+					Github repo
+				</a>
 			</div>
 		</div>
 	);
