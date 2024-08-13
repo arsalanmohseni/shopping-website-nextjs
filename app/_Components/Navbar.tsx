@@ -30,20 +30,23 @@ const Navbar = () => {
 						className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
 					>
 						<li>
-							<a href="/shop" className='text-xl font-bold'>Shop</a>
+							<a href="/shop" className="text-xl font-bold">
+								Shop
+							</a>
 						</li>
 						<li>
-							<a href="/about" className='text-xl font-bold'>About us</a>
+							<a href="/about" className="text-xl font-bold">
+								About us
+							</a>
 						</li>
 						<li>
-							<a href="/contact" className='text-xl font-bold'>Conatct us</a>
+							<a href="/contact" className="text-xl font-bold">
+								Conatct us
+							</a>
 						</li>
 					</ul>
 				</div>
-				<a
-					className="btn btn-ghost text-3xl"
-					href="/"
-				>
+				<a className="btn btn-ghost text-3xl" href="/">
 					Codi lab
 				</a>
 			</div>
