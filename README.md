@@ -24,11 +24,15 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ## Next steps
 
-1. Install mongodb & mongodb shell(If not installed)
-2. Create a Cluster
-3. Create a database in that
-4. Create 2 collections with these names: Post, User
-5. Done!!
+1. Get a free postgresql server(like neon or elephant sql) or install postgresql on your pc
+2. Create a file named ".env"
+3. Write this code in .env:
+`
+DATABASE_URL="<connection string here>"
+`
+4.
+    - If existing database: `npx prisma db pull`, then: `npx prisma generate`
+    - If new database: `npx prisma generate`
 
 ## Learn More
 
@@ -36,5 +40,3 @@ To learn more about Next.js, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
