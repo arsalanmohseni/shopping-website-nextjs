@@ -18,7 +18,7 @@ const ShopPage = (): React.ReactNode => {
 	}
 
 	const requestOptions: RequestInit = {
-		method: 'GET',
+		method: 'POST',
 		redirect: 'follow',
 	};
 
@@ -33,6 +33,7 @@ const ShopPage = (): React.ReactNode => {
 					requestOptions,
 				);
 				const data = await response.json();
+				console.log(data);
 				setProducts(data);
 			} catch (error) {
 				console.error(error);
@@ -52,10 +53,28 @@ const ShopPage = (): React.ReactNode => {
 			<h1 className="text-center text-6xl font-bold">Shop</h1>
 			<div className="divider">
 				{products.map((product) => (
-					<div key={product.id}>
-						<h2>{product.name}</h2>
-						<p>{product.description}</p>
-						<p>${product.price}</p>
+					<div className="card w-96 bg-base-100 shadow-xl">
+						<figure>
+							<img
+								src={product.image}
+								alt="Shoes"
+								className={`${product.price === 0 ? '' : 'blur-md contrast-200 grayscale filter'}`}
+							/>
+						</figure>
+						<div className="card-body">
+							<h2 className="card-title">{product.name}</h2>
+							<p>{product.description}</p>
+							<p className="text-2xl font-bold">
+								{product.price === 0
+									? 'Not available'
+									: '$' + product.price + ''}
+							</p>
+							<div className="card-actions justify-end">
+								<button className="btn btn-primary">
+									Buy Now
+								</button>
+							</div>
+						</div>
 					</div>
 				))}
 			</div>
