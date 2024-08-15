@@ -8,7 +8,11 @@ const config: Config = {
 		'./app/**/*.{js,ts,jsx,tsx,mdx}',
 	],
 	theme: {
-		extend: {},
+        extend: {
+            "margin": {
+                "30rem": "30rem"
+            }
+        },
 	},
 	plugins: [daisyui],
 };
