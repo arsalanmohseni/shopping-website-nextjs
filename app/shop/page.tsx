@@ -48,12 +48,20 @@ const ShopPage = (): React.ReactNode => {
 			<h1 className="text-center text-6xl font-bold">Shop</h1>
 			<div className="divider"></div>
 			{isLoading ? (
-				<div className='text-center text-2xl font-bold '>Loading...</div>
+				<div className="flex justify-center items-center mt-10">
+					<div className="spinner">
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
 			) : (
 				<div className="flex items-center justify-center">
-					<div className="flex flex-row gap-10 flex-wrap">
+					<div className="flex flex-row flex-wrap gap-10">
 						{products.map((product) => (
-							<div className="card w-96 bg-base-100 shadow-xl mt-10">
+							<div className="card mt-10 w-96 bg-base-100 shadow-xl">
 								<figure>
 									<img
 										src={product.image}
@@ -62,7 +70,9 @@ const ShopPage = (): React.ReactNode => {
 									/>
 								</figure>
 								<div className="card-body">
-									<h2 className="card-title">{product.name}</h2>
+									<h2 className="card-title">
+										{product.name}
+									</h2>
 									<p>{product.description}</p>
 									<p className="text-2xl font-bold">
 										{product.price === 0
