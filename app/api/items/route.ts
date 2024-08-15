@@ -17,7 +17,7 @@ const products: Product[] = [
 		name: 'Running Shoes',
 		description: 'High quality running shoes',
 		price: 55,
-		image: 'https://cdn.pixabay.com/photo/2016/06/03/17/35/shoes-1433925_1280.jpg',
+		image: '../../../public/shoes.jpg',
 		category: 'Clothing',
 	},
 	{
