@@ -27,12 +27,16 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 1. Get a free postgresql server(like neon or elephant sql) or install postgresql on your pc
 2. Create a file named ".env"
 3. Write this code in .env:
-`
+
+```.env
 DATABASE_URL="<connection string here>"
-`
+```
+
 4.
     - If existing database: `npx prisma db pull`, then: `npx prisma generate`
     - If new database: `npx prisma generate`
+5. Create a table named products
+6. Run `npx prisma db pull`, then: `npx prisma generate`
 
 ## Learn More
 
