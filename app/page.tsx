@@ -2,7 +2,7 @@ import React from 'react';
 
 const page = () => {
 	return (
-		<div>
+		<div className='*:text-center'>
 			<h1 className="mt-10 text-6xl font-black">
 				A simple e-commerce for practicing React
 			</h1>
