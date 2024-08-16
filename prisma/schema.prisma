@@ -28,13 +28,3 @@ model User {
     posts   Post[]
     profile Profile?
 }
-
-/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
-model Products {
-    id          Int     @id @default(autoincrement())
-    name        String? @unique
-    description String?
-    price       Float?  @db.Real @unique
-    image       String?
-    category    String?
-}
