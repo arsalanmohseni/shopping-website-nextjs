@@ -48,7 +48,7 @@ const ShopPage = (): React.ReactNode => {
 			<h1 className="text-center text-6xl font-bold">Shop</h1>
 			<div className="divider"></div>
 			{isLoading ? (
-				<div className="flex justify-center items-center mt-10">
+				<div className="flex items-center justify-center">
 					<div className="spinner">
 						<div></div>
 						<div></div>
